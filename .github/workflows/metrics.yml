@@ -11,7 +11,7 @@ on:
 jobs:
 
   # ═══════════════════════════════════════════════════════════
-  # 📊 Left Column — Header + Activity/Repos + Topics (Icons) + Languages + Calendar
+  # 📊 Left Column — Normal Base + Topics + Languages + Habits + Calendar
   # ═══════════════════════════════════════════════════════════
   github-metrics:
     runs-on: ubuntu-latest
@@ -29,11 +29,11 @@ jobs:
           template: classic
           config_timezone: Asia/Kolkata
 
-          # Section order: Header → Activity & Repos side-by-side → Starred Topics (Icons) → Languages → Calendar
-          config_order: base.header, base.activity+base.repositories, topics, languages, isocalendar
+          # Section order: Base content → Starred Topics → Languages → Coding Habits → Calendar
+          config_order: base.header, base.activity, base.community, base.repositories, topics, languages, habits, isocalendar
 
-          # ═══ Base content (Header, Activity, Repositories — NO community stats) ═══
-          base: header, activity, repositories, metadata
+          # ═══ Normal Base Content (default full base content, nothing removed) ═══
+          base: header, activity, community, repositories, metadata
           base_indepth: yes
 
           # ═══ Starred Topics (with Icons) ═══
@@ -50,6 +50,13 @@ jobs:
           plugin_languages_limit: 8
           plugin_languages_sections: most-used
           plugin_languages_threshold: 0%
+
+          # ═══ Coding Habits (placed ABOVE calendar) ═══
+          plugin_habits: yes
+          plugin_habits_charts_type: classic
+          plugin_habits_days: 14
+          plugin_habits_facts: yes
+          plugin_habits_from: 200
 
           # ═══ Contribution Calendar (isometric 3D) ═══
           plugin_isocalendar: yes
