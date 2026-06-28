@@ -11,7 +11,7 @@ on:
 jobs:
 
   # ═══════════════════════════════════════════════════════════
-  # 📊 Left Column — Base + Skills + Topics + Languages + Calendar
+  # 📊 Left Column — Header + Topics/Skills + Languages + Calendar
   # ═══════════════════════════════════════════════════════════
   github-metrics:
     runs-on: ubuntu-latest
@@ -29,16 +29,13 @@ jobs:
           template: classic
           config_timezone: Asia/Kolkata
 
-          # Order: header → activity+repos side-by-side → skill icons → languages → calendar
-          config_order: base.header, base.activity+base.repositories, topics, languages, isocalendar, lines
+          # Exact section order: Header → Starred Topics / Skills → Languages → Calendar
+          config_order: base.header, topics, languages, isocalendar
 
-          # ═══ Base content (NO community — removes sponsors/stargazers/forkers/watchers) ═══
-          base: header, activity, repositories, metadata
-          base_indepth: yes
+          # ═══ Base content (HEADER ONLY — removes community stats, activity, repos stats, sponsors, stargazers, forkers, watchers) ═══
+          base: header
 
-          # ═══ Starred Topics / Skills (with icons) ═══
-          # ⚠️ You MUST star these topics on GitHub for them to appear:
-          #    Go to https://github.com/topics/javascript → click ★ Star, repeat for each skill
+          # ═══ Starred Topics / Skill Icons ═══
           plugin_topics: yes
           plugin_topics_mode: icons
           plugin_topics_limit: 0
@@ -56,11 +53,6 @@ jobs:
           # ═══ Contribution Calendar (isometric 3D) ═══
           plugin_isocalendar: yes
           plugin_isocalendar_duration: half-year
-
-          # ═══ Lines of code changed ═══
-          plugin_lines: yes
-          plugin_lines_history_limit: 1
-          plugin_lines_repositories_limit: 4
 
   # ═══════════════════════════════════════════════════════════
   # 🦑 Right Column — Repos + WakaTime + Anilist + Music
@@ -82,10 +74,10 @@ jobs:
           config_timezone: Asia/Kolkata
           config_order: repositories, wakatime, anilist, music
 
-          # ═══ No base content (right column is plugins only) ═══
+          # ═══ No base content ═══
           base: ""
 
-          # ═══ Featured Repositories (your projects) ═══
+          # ═══ Featured Repositories (your 3 projects) ═══
           plugin_repositories: yes
           plugin_repositories_featured: Sowndhar-2005/the-Honored-One, Sowndhar-2005/Student-Performance-Analysis-Dashboard, Sowndhar-2005/DrugGuard-Detection-System
 
