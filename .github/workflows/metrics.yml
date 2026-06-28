@@ -11,7 +11,7 @@ on:
 jobs:
 
   # ═══════════════════════════════════════════════════════════
-  # 📊 Left Column — General Stats + Languages + Activity
+  # 📊 Left Column — Base + Topics + Languages + Calendar
   # ═══════════════════════════════════════════════════════════
   github-metrics:
     runs-on: ubuntu-latest
@@ -28,12 +28,13 @@ jobs:
           user: Sowndhar-2005
           template: classic
           config_timezone: Asia/Kolkata
+          config_order: base.header, isocalendar, languages, topics, activity, notable
 
           # ═══ Base content ═══
           base: header, activity, community, repositories, metadata
           base_indepth: yes
 
-          # ═══ Contribution Calendar ═══
+          # ═══ Contribution Calendar (isometric) ═══
           plugin_isocalendar: yes
           plugin_isocalendar_duration: half-year
 
@@ -45,8 +46,14 @@ jobs:
           plugin_languages_limit: 8
           plugin_languages_recent_categories: markup, programming
           plugin_languages_recent_days: 14
-          plugin_languages_sections: most-used
+          plugin_languages_sections: most-used, recently-used
           plugin_languages_threshold: 0%
+
+          # ═══ Starred Topics (with icons) ═══
+          plugin_topics: yes
+          plugin_topics_mode: icons
+          plugin_topics_limit: 0
+          plugin_topics_sort: stars
 
           # ═══ Activity ═══
           plugin_activity: yes
@@ -55,45 +62,61 @@ jobs:
           plugin_activity_limit: 5
           plugin_activity_visibility: public
 
+          # ═══ Notable Contributions ═══
+          plugin_notable: yes
+          plugin_notable_from: organization
+          plugin_notable_types: commit
+
           # ═══ Lines of code changed ═══
           plugin_lines: yes
           plugin_lines_history_limit: 1
           plugin_lines_repositories_limit: 4
 
   # ═══════════════════════════════════════════════════════════
-  # 🏆 Right Column — Achievements + Habits
+  # 🦑 Right Column — Repos + WakaTime + Anilist + Music
   # ═══════════════════════════════════════════════════════════
-  achievements:
+  medias:
     runs-on: ubuntu-latest
     permissions:
       contents: write
     steps:
-      - name: 🏆 Achievements & Habits
+      - name: 🦑 Medias & Projects
         uses: lowlighter/metrics@latest
         with:
-          filename: achievements.svg
+          filename: medias.svg
           token: ${{ secrets.METRICS_TOKEN }}
 
           # ═══ User info ═══
           user: Sowndhar-2005
           template: classic
           config_timezone: Asia/Kolkata
+          config_order: repositories, wakatime, anilist, music
 
-          # ═══ Base ═══
+          # ═══ No base content (right column is plugins only) ═══
           base: ""
 
-          # ═══ Achievements ═══
-          plugin_achievements: yes
-          plugin_achievements_display: detailed
-          plugin_achievements_threshold: C
+          # ═══ Featured Repositories (your projects) ═══
+          plugin_repositories: yes
+          plugin_repositories_featured: Sowndhar-2005/Sowndhar-2005
 
-          # ═══ Habits ═══
-          plugin_habits: yes
-          plugin_habits_charts_type: classic
-          plugin_habits_days: 14
-          plugin_habits_facts: yes
-          plugin_habits_from: 100
+          # ═══ WakaTime (coding stats over last week) ═══
+          plugin_wakatime: yes
+          plugin_wakatime_token: ${{ secrets.WAKATIME_TOKEN }}
+          plugin_wakatime_days: 7
+          plugin_wakatime_sections: time, projects, projects-graphs, languages, languages-graphs, editors, os
+          plugin_wakatime_limit: 5
 
-          # ═══ Stars ═══
-          plugin_stars: yes
-          plugin_stars_limit: 4
+          # ═══ Anilist (anime & manga) ═══
+          plugin_anilist: yes
+          plugin_anilist_user: Master466
+          plugin_anilist_medias: anime
+          plugin_anilist_sections: favorites, characters
+          plugin_anilist_limit: 2
+          plugin_anilist_limit_characters: 22
+
+          # ═══ Music (YouTube Music playlist) ═══
+          plugin_music: yes
+          plugin_music_provider: youtube
+          plugin_music_mode: playlist
+          plugin_music_playlist: https://music.youtube.com/playlist?list=PLGxDBKgU66aU&si=i3QZ7PCSdba_-XwJ
+          plugin_music_limit: 4
