@@ -11,7 +11,7 @@ on:
 jobs:
 
   # ═══════════════════════════════════════════════════════════
-  # 📊 Left Column — Normal Base + Topics + Languages + Habits + Calendar
+  # 📊 Left Column — Topics + Languages + WakaTime + Calendar
   # ═══════════════════════════════════════════════════════════
   github-metrics:
     runs-on: ubuntu-latest
@@ -29,12 +29,11 @@ jobs:
           template: classic
           config_timezone: Asia/Kolkata
 
-          # Section order: Base content → Starred Topics → Languages → Coding Habits → Calendar
-          config_order: base.header, base.activity, base.community, base.repositories, topics, languages, habits, isocalendar
+          # Exact section order: Starred Topics (Icons) → Languages → WakaTime → Calendar
+          config_order: topics, languages, wakatime, isocalendar
 
-          # ═══ Normal Base Content (default full base content, nothing removed) ═══
-          base: header, activity, community, repositories, metadata
-          base_indepth: yes
+          # ═══ Base content completely removed (No Activity, Repositories, Community stats) ═══
+          base: ""
 
           # ═══ Starred Topics (with Icons) ═══
           plugin_topics: yes
@@ -51,19 +50,19 @@ jobs:
           plugin_languages_sections: most-used
           plugin_languages_threshold: 0%
 
-          # ═══ Coding Habits (placed ABOVE calendar) ═══
-          plugin_habits: yes
-          plugin_habits_charts_type: classic
-          plugin_habits_days: 14
-          plugin_habits_facts: yes
-          plugin_habits_from: 200
+          # ═══ WakaTime (MOVED TO LEFT COLUMN — placed ABOVE calendar) ═══
+          plugin_wakatime: yes
+          plugin_wakatime_token: ${{ secrets.WAKATIME_TOKEN }}
+          plugin_wakatime_days: 7
+          plugin_wakatime_sections: time, projects, projects-graphs, languages, languages-graphs, editors, os
+          plugin_wakatime_limit: 5
 
           # ═══ Contribution Calendar (isometric 3D) ═══
           plugin_isocalendar: yes
           plugin_isocalendar_duration: half-year
 
   # ═══════════════════════════════════════════════════════════
-  # 🦑 Right Column — Repos + WakaTime + Anilist + Music
+  # 🦑 Right Column — Repos + Anilist + Music
   # ═══════════════════════════════════════════════════════════
   medias:
     runs-on: ubuntu-latest
@@ -80,7 +79,7 @@ jobs:
           user: Sowndhar-2005
           template: classic
           config_timezone: Asia/Kolkata
-          config_order: repositories, wakatime, anilist, music
+          config_order: repositories, anilist, music
 
           # ═══ No base content ═══
           base: ""
@@ -88,13 +87,6 @@ jobs:
           # ═══ Featured Repositories (your 3 projects) ═══
           plugin_repositories: yes
           plugin_repositories_featured: Sowndhar-2005/the-Honored-One, Sowndhar-2005/Student-Performance-Analysis-Dashboard, Sowndhar-2005/DrugGuard-Detection-System
-
-          # ═══ WakaTime (coding stats over last week) ═══
-          plugin_wakatime: yes
-          plugin_wakatime_token: ${{ secrets.WAKATIME_TOKEN }}
-          plugin_wakatime_days: 7
-          plugin_wakatime_sections: time, projects, projects-graphs, languages, languages-graphs, editors, os
-          plugin_wakatime_limit: 5
 
           # ═══ Anilist (anime & manga) ═══
           plugin_anilist: yes
