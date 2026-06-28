@@ -1,16 +1,31 @@
-## Hi there 👋
+```md
+# Hi there 👋, I'm Sowndhar A
 
-<!--
-**Sowndhar-2005/Sowndhar-2005** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+🎓 AI & ML Engineering Student  
+💻 Full Stack & Cross-Platform Developer  
+🤖 AI/ML Enthusiast • UI/UX Designer • Open Source Learner
 
-Here are some ideas to get you started:
+## 🚀 Tech Stack
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+- **Languages:** Java, Python, JavaScript, TypeScript, C++, C#
+- **Frontend:** Angular, React, Flutter, HTML, CSS, Tailwind CSS
+- **Backend:** Node.js, Express, Spring Boot, ASP.NET Core, FastAPI
+- **Database:** MySQL, PostgreSQL, MongoDB, Firebase
+- **AI/ML:** TensorFlow, PyTorch, Scikit-learn, Pandas
+- **Tools:** Git, GitHub, Docker, VS Code, Figma
+
+## 🌱 Currently Learning
+
+- Data Structures & Algorithms
+- System Design
+- Cloud & DevOps
+- AI Agents, RAG & LLMs
+
+## 📫 Connect with Me
+
+- GitHub: https://github.com/Sowndhar-2005
+- Email: asowndhar2005@gmail.com
+
+---
+⭐ Always learning, building, and sharing.
+```
