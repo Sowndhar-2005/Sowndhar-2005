@@ -11,7 +11,7 @@ on:
 jobs:
 
   # ═══════════════════════════════════════════════════════════
-  # 📊 Left Column — Header + Skill Topics (Icons) + Languages + Calendar
+  # 📊 Left Column — Header + Activity/Repos + Topics (Icons) + Languages + Calendar
   # ═══════════════════════════════════════════════════════════
   github-metrics:
     runs-on: ubuntu-latest
@@ -29,13 +29,14 @@ jobs:
           template: classic
           config_timezone: Asia/Kolkata
 
-          # Exact section order: Header → Starred Topics (Skill Icons) → Languages → Calendar
-          config_order: base.header, topics, languages, isocalendar
+          # Section order: Header → Activity & Repos side-by-side → Starred Topics (Icons) → Languages → Calendar
+          config_order: base.header, base.activity+base.repositories, topics, languages, isocalendar
 
-          # ═══ Base content (HEADER ONLY) ═══
-          base: header
+          # ═══ Base content (Header, Activity, Repositories — NO community stats) ═══
+          base: header, activity, repositories, metadata
+          base_indepth: yes
 
-          # ═══ Starred Topics / Skill Icons INSIDE THE SVG ═══
+          # ═══ Starred Topics (with Icons) ═══
           plugin_topics: yes
           plugin_topics_mode: icons
           plugin_topics_limit: 0
