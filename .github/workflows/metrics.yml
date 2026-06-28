@@ -28,7 +28,7 @@ jobs:
           user: Sowndhar-2005
           template: classic
           config_timezone: Asia/Kolkata
-          config_order: base.header, isocalendar, languages, topics, activity, notable
+          config_order: base.header, isocalendar, languages, topics, lines
 
           # ═══ Base content ═══
           base: header, activity, community, repositories, metadata
@@ -44,9 +44,7 @@ jobs:
           plugin_languages_categories: markup, programming
           plugin_languages_colors: github
           plugin_languages_limit: 8
-          plugin_languages_recent_categories: markup, programming
-          plugin_languages_recent_days: 14
-          plugin_languages_sections: most-used, recently-used
+          plugin_languages_sections: most-used
           plugin_languages_threshold: 0%
 
           # ═══ Starred Topics (with icons) ═══
@@ -54,18 +52,6 @@ jobs:
           plugin_topics_mode: icons
           plugin_topics_limit: 0
           plugin_topics_sort: stars
-
-          # ═══ Activity ═══
-          plugin_activity: yes
-          plugin_activity_days: 14
-          plugin_activity_filter: all
-          plugin_activity_limit: 5
-          plugin_activity_visibility: public
-
-          # ═══ Notable Contributions ═══
-          plugin_notable: yes
-          plugin_notable_from: organization
-          plugin_notable_types: commit
 
           # ═══ Lines of code changed ═══
           plugin_lines: yes
@@ -97,7 +83,7 @@ jobs:
 
           # ═══ Featured Repositories (your projects) ═══
           plugin_repositories: yes
-          plugin_repositories_featured: Sowndhar-2005/Sowndhar-2005
+          plugin_repositories_featured: Sowndhar-2005/the-Honored-One, Sowndhar-2005/Student-Performance-Analysis-Dashboard, Sowndhar-2005/DrugGuard-Detection-System
 
           # ═══ WakaTime (coding stats over last week) ═══
           plugin_wakatime: yes
