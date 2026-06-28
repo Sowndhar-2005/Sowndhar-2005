@@ -1,0 +1,139 @@
+# GitHub Metrics — Auto-generate SVG infographics for your profile
+# Based on https://github.com/lowlighter/metrics
+# Runs daily and can be triggered manually from the Actions tab
+
+name: Metrics
+on:
+  # 🌏 Runs once a day at midnight UTC
+  schedule: [{cron: "0 0 * * *"}]
+  # 💡 Run manually from the Actions tab
+  workflow_dispatch:
+  # 🚀 Also run on pushes to main (initial setup)
+  push:
+    branches: [main]
+
+jobs:
+
+  # ═══════════════════════════════════════════════════════════
+  # 📊 Left Column — General Stats + Languages + Activity
+  # ═══════════════════════════════════════════════════════════
+  github-metrics:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: 📊 General Metrics
+        uses: lowlighter/metrics@latest
+        with:
+          filename: github-metrics.svg
+          token: ${{ secrets.METRICS_TOKEN }}
+
+          # ═══ User info ═══
+          user: Sowndhar-2005
+          template: classic
+          config_timezone: Asia/Kolkata
+
+          # ═══ Base content ═══
+          base: header, activity, community, repositories, metadata
+          base_indepth: yes
+
+          # ═══ Contribution Calendar ═══
+          plugin_isocalendar: yes
+          plugin_isocalendar_duration: half-year
+
+          # ═══ Languages ═══
+          plugin_languages: yes
+          plugin_languages_analysis_timeout: 15
+          plugin_languages_analysis_timeout_repositories: 7.5
+          plugin_languages_categories: markup, programming
+          plugin_languages_colors: github
+          plugin_languages_limit: 8
+          plugin_languages_recent_categories: markup, programming
+          plugin_languages_recent_days: 14
+          plugin_languages_recent_load: 300
+          plugin_languages_sections: most-used
+          plugin_languages_threshold: 0%
+
+          # ═══ Notable Contributions ═══
+          plugin_notable: yes
+          plugin_notable_from: organization
+          plugin_notable_types: commit
+
+          # ═══ Activity ═══
+          plugin_activity: yes
+          plugin_activity_days: 14
+          plugin_activity_filter: all
+          plugin_activity_limit: 5
+          plugin_activity_load: 300
+          plugin_activity_visibility: public
+
+          # ═══ Lines of code changed ═══
+          plugin_lines: yes
+          plugin_lines_history_limit: 1
+          plugin_lines_repositories_limit: 4
+          plugin_lines_sections: base
+
+  # ═══════════════════════════════════════════════════════════
+  # 🏆 Right Column — Achievements + Habits
+  # ═══════════════════════════════════════════════════════════
+  achievements:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: 🏆 Achievements
+        uses: lowlighter/metrics@latest
+        with:
+          filename: achievements.svg
+          token: ${{ secrets.METRICS_TOKEN }}
+
+          # ═══ User info ═══
+          user: Sowndhar-2005
+          template: classic
+          config_timezone: Asia/Kolkata
+
+          # ═══ Only show achievements ═══
+          base: ""
+
+          # ═══ Achievements ═══
+          plugin_achievements: yes
+          plugin_achievements_display: detailed
+          plugin_achievements_secrets: yes
+          plugin_achievements_threshold: C
+
+          # ═══ Habits ═══
+          plugin_habits: yes
+          plugin_habits_charts_type: classic
+          plugin_habits_days: 14
+          plugin_habits_facts: yes
+          plugin_habits_from: 200
+          plugin_habits_languages_limit: 8
+          plugin_habits_languages_threshold: 0%
+
+          # ═══ Stars ═══
+          plugin_stars: yes
+          plugin_stars_limit: 4
+
+  # ═══════════════════════════════════════════════════════════
+  # 🐍 Snake Contribution Animation
+  # ═══════════════════════════════════════════════════════════
+  snake:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: 🐍 Generate Snake
+        uses: Platane/snk/svg-only@v3
+        with:
+          github_user_name: Sowndhar-2005
+          outputs: |
+            dist/github-snake.svg
+            dist/github-snake-dark.svg?palette=github-dark
+
+      - name: 📤 Push Snake to output branch
+        uses: crazy-max/ghaction-github-pages@v4
+        with:
+          target_branch: output
+          build_dir: dist
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
