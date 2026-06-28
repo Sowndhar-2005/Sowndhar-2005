@@ -113,27 +113,3 @@ jobs:
           # ═══ Stars ═══
           plugin_stars: yes
           plugin_stars_limit: 4
-
-  # ═══════════════════════════════════════════════════════════
-  # 🐍 Snake Contribution Animation
-  # ═══════════════════════════════════════════════════════════
-  snake:
-    runs-on: ubuntu-latest
-    permissions:
-      contents: write
-    steps:
-      - name: 🐍 Generate Snake
-        uses: Platane/snk/svg-only@v3
-        with:
-          github_user_name: Sowndhar-2005
-          outputs: |
-            dist/github-snake.svg
-            dist/github-snake-dark.svg?palette=github-dark
-
-      - name: 📤 Push Snake to output branch
-        uses: crazy-max/ghaction-github-pages@v4
-        with:
-          target_branch: output
-          build_dir: dist
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
