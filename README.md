@@ -1,10 +1,13 @@
-<table border="0" cellpadding="0" cellspacing="0" width="100%">
-  <tr>
-    <td valign="top" width="50%">
-      <img src="https://raw.githubusercontent.com/Sowndhar-2005/Sowndhar-2005/main/github-metrics.svg" width="100%" alt="Metrics">
-    </td>
-    <td valign="top" width="50%">
-      <img src="https://raw.githubusercontent.com/Sowndhar-2005/Sowndhar-2005/main/achievements.svg" width="100%" alt="Achievements">
-    </td>
-  </tr>
-</table>
+> Want to know what I'm currently working on?\
+> Checkout [@Sowndhar-2005's repositories](https://github.com/Sowndhar-2005?tab=repositories)
+> 
+> *PS: 🎓 AI & ML Engineering Student | 💻 Full Stack & Cross-Platform Developer*
+> - [x] **AI & ML Engineering** — Building intelligent systems & exploring RAG / LLMs
+> - [x] **Full Stack Development** — Angular, React, Node.js, Express & Spring Boot
+> - [x] **Cross-Platform Apps** — Developing mobile applications with Flutter
+> - [ ] **Cloud & System Design** — Learning scalable architectures & DevOps practices
+> 
+> *⭐ Always learning, building, and sharing!*
+
+[<img align="left" width="390" alt="Metrics" src="https://raw.githubusercontent.com/Sowndhar-2005/Sowndhar-2005/main/github-metrics.svg">](https://github.com/Sowndhar-2005)
+[<img align="right" width="390" alt="Achievements" src="https://raw.githubusercontent.com/Sowndhar-2005/Sowndhar-2005/main/achievements.svg">](https://github.com/Sowndhar-2005)
