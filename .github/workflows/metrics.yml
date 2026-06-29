@@ -11,7 +11,7 @@ on:
 jobs:
 
   # ═══════════════════════════════════════════════════════════
-  # 📊 Left Column — Topics + Languages + WakaTime + Calendar
+  # 📊 Left Column — Topics + Languages + WakaTime + Habits + Calendar
   # ═══════════════════════════════════════════════════════════
   github-metrics:
     runs-on: ubuntu-latest
@@ -29,8 +29,8 @@ jobs:
           template: classic
           config_timezone: Asia/Kolkata
 
-          # Exact section order: Starred Topics (Icons) → Languages → WakaTime → Calendar
-          config_order: topics, languages, wakatime, isocalendar
+          # Exact section order: Starred Topics (Icons) → Languages → WakaTime → Coding Habits → Calendar
+          config_order: topics, languages, wakatime, habits, isocalendar
 
           # ═══ Base content completely removed (No Activity, Repositories, Community stats) ═══
           base: ""
@@ -50,12 +50,19 @@ jobs:
           plugin_languages_sections: most-used
           plugin_languages_threshold: 0%
 
-          # ═══ WakaTime (MOVED TO LEFT COLUMN — placed ABOVE calendar) ═══
+          # ═══ WakaTime ═══
           plugin_wakatime: yes
           plugin_wakatime_token: ${{ secrets.WAKATIME_TOKEN }}
           plugin_wakatime_days: 7
           plugin_wakatime_sections: time, projects, projects-graphs, languages, languages-graphs, editors, os
           plugin_wakatime_limit: 5
+
+          # ═══ Coding Habits and Activity ═══
+          plugin_habits: yes
+          plugin_habits_from: 200
+          plugin_habits_days: 14
+          plugin_habits_facts: yes
+          plugin_habits_charts: yes
 
           # ═══ Contribution Calendar (isometric 3D) ═══
           plugin_isocalendar: yes
