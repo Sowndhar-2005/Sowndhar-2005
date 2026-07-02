@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=none
 # GitHub Metrics — Auto-generate SVG infographics for your profile
 # Based on https://github.com/lowlighter/metrics
 
@@ -29,8 +30,8 @@ jobs:
           template: classic
           config_timezone: Asia/Kolkata
 
-          # Section order: Header → Starred Topics (Icons) → Languages → WakaTime → Habits → Calendar
-          config_order: base.header, topics, languages, wakatime, habits, isocalendar
+          # Section order: Header → Starred Topics (Icons) → Languages → WakaTime → Calendar
+          config_order: base.header, topics, languages, wakatime, isocalendar
 
           # ═══ Base content (Header with hireable badge) ═══
           base: header
@@ -58,16 +59,17 @@ jobs:
           plugin_wakatime_sections: time, projects, projects-graphs, languages, languages-graphs, editors, os
           plugin_wakatime_limit: 5
 
-          # ═══ Coding Habits and Activity ═══
-          plugin_habits: yes
-          plugin_habits_from: 200
-          plugin_habits_days: 14
-          plugin_habits_facts: yes
-          plugin_habits_charts_type: classic
-
           # ═══ Contribution Calendar (isometric 3D) ═══
           plugin_isocalendar: yes
           plugin_isocalendar_duration: half-year
+
+          # ═══ Custom CSS ═══
+          extras_css: |
+            .topics img {
+              width: 36px !important;
+              height: 36px !important;
+              margin: 6px !important;
+            }
 
   # ═══════════════════════════════════════════════════════════
   # 🦑 Right Column — Repos + Anilist + Music
