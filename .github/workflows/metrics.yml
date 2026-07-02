@@ -30,8 +30,8 @@ jobs:
           template: classic
           config_timezone: Asia/Kolkata
 
-          # Section order: Header → Starred Topics (Icons) → Languages → WakaTime → Calendar
-          config_order: base.header, topics, languages, wakatime, isocalendar
+          # Section order: Header → Starred Topics (Icons) → Languages → WakaTime → Lines of Code → Calendar
+          config_order: base.header, topics, languages, wakatime, lines, isocalendar
 
           # ═══ Base content (Header with hireable badge) ═══
           base: header
@@ -58,6 +58,9 @@ jobs:
           plugin_wakatime_days: 7
           plugin_wakatime_sections: time, projects, projects-graphs, languages, languages-graphs, editors, os
           plugin_wakatime_limit: 5
+
+          # ═══ Lines of Code ═══
+          plugin_lines: yes
 
           # ═══ Contribution Calendar (isometric 3D) ═══
           plugin_isocalendar: yes
