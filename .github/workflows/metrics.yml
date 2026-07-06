@@ -40,7 +40,6 @@ jobs:
           # ═══ Custom About Me Section ═══
           plugin_introduction: yes
           plugin_introduction_title: yes
-          plugin_introduction_text: I'm an AI & Machine Learning Engineering student passionate about building intelligent applications, modern web experiences, and cross-platform software. I enjoy working across full-stack development, AI/ML, UI/UX design, and cloud technologies to create practical, scalable solutions. I continuously learn new technologies, solve coding challenges, contribute to personal and open-source projects, and strive to grow as a software engineer. I'm always excited to explore emerging technologies, collaborate with others, and turn innovative ideas into real-world applications.
 
           # ═══ Starred Topics (with Icons) ═══
           plugin_topics: yes
@@ -76,6 +75,18 @@ jobs:
               width: 36px !important;
               height: 36px !important;
               margin: 6px !important;
+            }
+            /* Hide fetched GitHub bio and show custom bio */
+            .introduction .description {
+              display: none !important;
+            }
+            .introduction::after {
+              content: "I'm an AI & Machine Learning Engineering student passionate about building intelligent applications, modern web experiences, and cross-platform software. I enjoy working across full-stack development, AI/ML, UI/UX design, and cloud technologies to create practical, scalable solutions. I continuously learn new technologies, solve coding challenges, contribute to personal and open-source projects, and strive to grow as a software engineer. I'm always excited to explore emerging technologies, collaborate with others, and turn innovative ideas into real-world applications.";
+              display: block;
+              font-size: 13px;
+              line-height: 1.5;
+              color: #c9d1d9;
+              margin-top: 8px;
             }
 
   # ═══════════════════════════════════════════════════════════
