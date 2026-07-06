@@ -31,15 +31,14 @@ jobs:
           config_timezone: Asia/Kolkata
 
           # Section order: Header → About Me → Starred Topics (Icons) → Languages → WakaTime → Lines of Code → Calendar
-          config_order: base.header, introduction, topics, languages, wakatime, lines, isocalendar
+          config_order: base.header, topics, languages, wakatime, lines, isocalendar
 
           # ═══ Base content (Header with hireable badge) ═══
           base: header
           base_hireable: yes
 
           # ═══ Custom About Me Section ═══
-          plugin_introduction: yes
-          plugin_introduction_title: yes
+          plugin_introduction: no
 
           # ═══ Starred Topics (with Icons) ═══
           plugin_topics: yes
@@ -76,18 +75,14 @@ jobs:
               height: 36px !important;
               margin: 6px !important;
             }
-            /* Hide fetched GitHub bio and show custom bio */
-            .introduction .description {
-              display: none !important;
-            }
-            .introduction::after {
-              content: "I'm an AI & Machine Learning Engineering student passionate about building intelligent applications, modern web experiences, and cross-platform software. I enjoy working across full-stack development, AI/ML, UI/UX design, and cloud technologies to create practical, scalable solutions. I continuously learn new technologies, solve coding challenges, contribute to personal and open-source projects, and strive to grow as a software engineer. I'm always excited to explore emerging technologies, collaborate with others, and turn innovative ideas into real-world applications.";
-              display: block;
-              font-size: 13px;
-              line-height: 1.5;
-              color: #c9d1d9;
-              margin-top: 8px;
-            }
+          
+          extras_section: About Me
+          
+          extras_html: |
+            <div style="background: linear-gradient(135deg, rgba(31,111,235,0.1) 0%, rgba(56,139,253,0.1) 100%); border: 1px solid #30363d; border-radius: 6px; padding: 16px; margin: 16px 0; text-align: center;">
+              <h3 style="color: #58a6ff; margin: 0 0 12px 0; font-size: 16px;">About Me</h3>
+              <p style="color: #8b949e; font-size: 12px; line-height: 1.6; margin: 0;">I'm an AI & Machine Learning Engineering student passionate about building intelligent applications, modern web experiences, and cross-platform software. I enjoy working across full-stack development, AI/ML, UI/UX design, and cloud technologies to create practical, scalable solutions. I continuously learn new technologies, solve coding challenges, contribute to personal and open-source projects, and strive to grow as a software engineer. I'm always excited to explore emerging technologies, collaborate with others, and turn innovative ideas into real-world applications.</p>
+            </div>
 
   # ═══════════════════════════════════════════════════════════
   # 🦑 Right Column — Repos + Anilist + Music
