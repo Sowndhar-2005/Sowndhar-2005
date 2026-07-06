@@ -30,16 +30,16 @@ jobs:
           template: classic
           config_timezone: Asia/Kolkata
 
-          # Section order: Header → Introduction → Starred Topics (Icons) → Languages → WakaTime → Lines of Code → Calendar
-          config_order: base.header, introduction, topics, languages, wakatime, lines, isocalendar
+          # Section order: Header → About Me → Starred Topics (Icons) → Languages → WakaTime → Lines of Code → Calendar
+          config_order: base.header, about_me, topics, languages, wakatime, lines, isocalendar
 
           # ═══ Base content (Header with hireable badge) ═══
           base: header
           base_hireable: yes
 
-          # ═══ Introduction (Custom About Me) ═══
-          plugin_introduction: yes
-          plugin_introduction_title: yes
+          # ═══ About Me (Custom) ═══
+          plugin_about_me: yes
+          plugin_about_me_title: yes
 
           # ═══ Starred Topics (with Icons) ═══
           plugin_topics: yes
@@ -77,17 +77,17 @@ jobs:
               margin: 6px !important;
             }
             /* Hide the fetched GitHub bio text */
-            .introduction .user {
+            .about_me .user {
               display: none !important;
             }
             /* Add custom avatar image */
-            .introduction section {
+            .about_me section {
               display: flex;
               flex-direction: column;
               align-items: center;
               gap: 8px;
             }
-            .introduction section::before {
+            .about_me section::before {
               content: "";
               display: block;
               width: 80px;
@@ -97,7 +97,7 @@ jobs:
               border: 3px solid #58a6ff;
               box-shadow: 0 0 12px rgba(88, 166, 255, 0.3);
             }
-            .introduction section::after {
+            .about_me section::after {
               content: "🚀 Passionate AI & ML Engineering Student | Full-Stack Developer | UI/UX Designer. Building AI-powered applications and learning something new every day. Open to collaboration and new opportunities!";
               display: block;
               text-align: center;

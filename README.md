@@ -1,2 +1,4 @@
 [<img align="left" width="390" alt="📊" src="https://raw.githubusercontent.com/Sowndhar-2005/Sowndhar-2005/main/github-metrics.svg">](https://github.com/Sowndhar-2005)
 [<img align="right" width="390" alt="🦑" src="https://raw.githubusercontent.com/Sowndhar-2005/Sowndhar-2005/main/medias.svg">](https://github.com/Sowndhar-2005)
+
+I'm an AI & Machine Learning Engineering student passionate about building intelligent applications, modern web experiences, and cross-platform software. I enjoy working across full-stack development, AI/ML, UI/UX design, and cloud technologies to create practical, scalable solutions. I continuously learn new technologies, solve coding challenges, contribute to personal and open-source projects, and strive to grow as a software engineer. I'm always excited to explore emerging technologies, collaborate with others, and turn innovative ideas into real-world applications.
