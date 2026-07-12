@@ -116,7 +116,7 @@ jobs:
           plugin_anilist_user: Master466
           plugin_anilist_medias: anime
           plugin_anilist_sections: favorites
-          plugin_anilist_limit: 2
+          plugin_anilist_limit: 0
 
 
 
