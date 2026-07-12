@@ -118,14 +118,7 @@ jobs:
           plugin_anilist_sections: favorites
           plugin_anilist_limit: 2
 
-          # ═══ Custom CSS to hide minutes/chapters and add genres ═══
-          extras_css: |
-            section:nth-of-type(2) > .row.fill-width div.field::after {
-              content: " Action, Adventure, Fantasy, Supernatural, Drama, Mystery, Psychological, Thriller" !important;
-            }
-            section:nth-of-type(2) > .row.fill-width + .row {
-              display: none !important;
-            }
+
 
           # ═══ Music (YouTube Music playlist) ═══
           plugin_music: yes
