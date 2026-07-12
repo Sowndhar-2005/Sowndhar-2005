@@ -7,7 +7,10 @@
   <a href="https://www.linkedin.com/in/sowndhar-dev/" style="text-decoration: underline;">linkedin</a>
 </p>
 
-<br />
+- **AI & Machine Learning** — Developing intelligent models and data-driven systems
+- **Full-Stack Web Development** — Creating scalable web applications using the MEAN stack and FastAPI
+- **UI/UX Design** — Crafting premium, interactive interfaces with glassmorphism and modern styling
+  - *I'm working actively on this currently*
 
 [<img align="left" width="390" alt="📊" src="https://raw.githubusercontent.com/Sowndhar-2005/Sowndhar-2005/main/github-metrics.svg">](https://wakatime.com)
 [<img align="right" width="390" alt="🦑" src="https://raw.githubusercontent.com/Sowndhar-2005/Sowndhar-2005/main/medias.svg">](https://github.com/Sowndhar-2005?tab=repositories)

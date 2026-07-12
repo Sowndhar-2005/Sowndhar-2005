@@ -19,8 +19,8 @@ jobs:
     permissions:
       contents: write
     steps:
-      - name: 📊 General Metrics
-        uses: lowlighter/metrics@latest
+      - name: Metrics embed
+        uses: lowlighter/metrics@v3.34
         with:
           filename: github-metrics.svg
           token: ${{ secrets.METRICS_TOKEN }}
@@ -92,8 +92,8 @@ jobs:
     permissions:
       contents: write
     steps:
-      - name: 🦑 Medias & Projects
-        uses: lowlighter/metrics@latest
+      - name: Metrics embed
+        uses: lowlighter/metrics@v3.34
         with:
           filename: medias.svg
           token: ${{ secrets.METRICS_TOKEN }}
