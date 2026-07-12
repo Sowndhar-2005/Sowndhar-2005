@@ -109,15 +109,23 @@ jobs:
 
           # ═══ Featured Repositories (your 3 projects) ═══
           plugin_repositories: yes
-          plugin_repositories_featured: Sowndhar-2005/the-Honored-One, Sowndhar-2005/Student-Performance-Analysis-Dashboard, Sowndhar-2005/DrugGuard-Detection-System
+          plugin_repositories_featured: Sowndhar-2005/Campus-Canteen, Sowndhar-2005/Student-Performance-Analysis-Dashboard, Sowndhar-2005/DrugGuard-Detection-System
 
           # ═══ Anilist (anime & manga) ═══
           plugin_anilist: yes
           plugin_anilist_user: Master466
           plugin_anilist_medias: anime
-          plugin_anilist_sections: favorites, characters
+          plugin_anilist_sections: favorites
           plugin_anilist_limit: 2
-          plugin_anilist_limit_characters: 22
+
+          # ═══ Custom CSS to hide minutes/chapters and add genres ═══
+          extras_css: |
+            section:nth-of-type(2) > .row.fill-width div.field::after {
+              content: " Action, Adventure, Fantasy, Supernatural, Drama, Mystery, Psychological, Thriller" !important;
+            }
+            section:nth-of-type(2) > .row.fill-width + .row {
+              display: none !important;
+            }
 
           # ═══ Music (YouTube Music playlist) ═══
           plugin_music: yes
