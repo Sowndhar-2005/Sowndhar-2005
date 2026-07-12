@@ -12,13 +12,6 @@
   <a href="https://www.linkedin.com/in/sowndhar-dev/" target="_blank"><strong>LinkedIn</strong></a>
 </p>
 
-## 🚀 What I Do
-- 🤖 **AI & Machine Learning** — Building intelligent applications, LLMs, and data-driven solutions.
-- 💻 **Full-Stack Development** — Developing scalable web, desktop, and cross-platform applications.
-- 🎨 **UI/UX Design** — Designing clean, intuitive, and user-focused digital experiences.
-- 🌱 **Currently Exploring** — System Design, MLOps, Cloud, and AI Agents.
-- 🤝 **Collaboration** — Open to collaborating on AI, Full-Stack, and Open Source projects.
-
 [<img align="left" width="390" alt="📊" src="https://raw.githubusercontent.com/Sowndhar-2005/Sowndhar-2005/main/github-metrics.svg">](https://wakatime.com)
 [<img align="right" width="390" alt="🦑" src="https://raw.githubusercontent.com/Sowndhar-2005/Sowndhar-2005/main/medias.svg">](https://github.com/Sowndhar-2005?tab=repositories)
 
