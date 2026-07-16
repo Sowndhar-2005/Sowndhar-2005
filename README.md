@@ -1,7 +1,7 @@
-<h1 align="center">Sowndhar A</h1>
+<!-- <h1 align="center">Sowndhar A</h1>
 <p align="center">
   AI/ML Engineer • Full-Stack Developer • UI/UX Designer
-</p>
+</p> -->
 <p align="center">
   <a href="https://drive.google.com/file/d/1z1w9ZKWItrWPhge6s-cNu1D_TvlsWJAh/view?usp=sharing" target="_blank"><strong>Resume</strong></a>
   •
