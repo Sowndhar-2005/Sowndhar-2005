@@ -5,7 +5,7 @@
 <p align="center">
   <a href="https://drive.google.com/file/d/1z1w9ZKWItrWPhge6s-cNu1D_TvlsWJAh/view?usp=sharing" target="_blank"><strong>Resume</strong></a>
   •
-  <a href="https://codolio.com/profile/Sowndhar_A" target="_blank"><strong>Codolio</strong></a>
+  <a href="https://codolio.com/profile/master-" target="_blank"><strong>Codolio</strong></a>
   •
   <a href="https://your-portfolio-url.com" target="_blank"><strong>Portfolio</strong></a>
   •
