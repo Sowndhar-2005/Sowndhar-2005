@@ -12,7 +12,7 @@ on:
 jobs:
 
   # ═══════════════════════════════════════════════════════════
-  # 📊 Left Column — Base Header + Introduction + Topics + Languages + WakaTime + Habits + Calendar
+  # 📊 Left Column — Header + Languages + WakaTime
   # ═══════════════════════════════════════════════════════════
   github-metrics:
     runs-on: ubuntu-latest
@@ -30,29 +30,20 @@ jobs:
           template: classic
           config_timezone: Asia/Kolkata
 
-          # Section order: Header → About Me → Starred Topics (Icons) → Languages → WakaTime → Lines of Code → Calendar
-          config_order: base.header, topics, languages, wakatime, lines, isocalendar
+          # Section order
+          config_order: base.header, languages, wakatime
 
           # ═══ Base content (Header with hireable badge) ═══
           base: header
           base_hireable: yes
 
-          # ═══ Custom About Me Section ═══
-          plugin_introduction: no
-
-          # ═══ Starred Topics (with Icons) ═══
-          plugin_topics: yes
-          plugin_topics_mode: icons
-          plugin_topics_limit: 0
-          plugin_topics_sort: stars
-
-          # ═══ Most Used Languages ═══
+          # ═══ Languages (Most Used + Recently Used) ═══
           plugin_languages: yes
           plugin_languages_analysis_timeout: 15
           plugin_languages_categories: markup, programming
           plugin_languages_colors: github
           plugin_languages_limit: 8
-          plugin_languages_sections: most-used
+          plugin_languages_sections: most-used, recently-used
           plugin_languages_threshold: 0%
 
           # ═══ WakaTime ═══
@@ -62,30 +53,8 @@ jobs:
           plugin_wakatime_sections: time, projects, projects-graphs, languages, languages-graphs, editors, os
           plugin_wakatime_limit: 5
 
-          # ═══ Lines of Code ═══
-          plugin_lines: yes
-
-          # ═══ Contribution Calendar (isometric 3D) ═══
-          plugin_isocalendar: yes
-          plugin_isocalendar_duration: half-year
-
-          extras_css: |
-            .topics img {
-              width: 36px !important;
-              height: 36px !important;
-              margin: 6px !important;
-            }
-          
-          extras_section: About Me
-          
-          extras_html: |
-            <div style="background: linear-gradient(135deg, rgba(31,111,235,0.1) 0%, rgba(56,139,253,0.1) 100%); border: 1px solid #30363d; border-radius: 6px; padding: 16px; margin: 16px 0; text-align: center;">
-              <h3 style="color: #58a6ff; margin: 0 0 12px 0; font-size: 16px;">About Me</h3>
-              <p style="color: #8b949e; font-size: 12px; line-height: 1.6; margin: 0;">I'm an AI & Machine Learning Engineering student passionate about building intelligent applications, modern web experiences, and cross-platform software. I enjoy working across full-stack development, AI/ML, UI/UX design, and cloud technologies to create practical, scalable solutions. I continuously learn new technologies, solve coding challenges, contribute to personal and open-source projects, and strive to grow as a software engineer. I'm always excited to explore emerging technologies, collaborate with others, and turn innovative ideas into real-world applications.</p>
-            </div>
-
   # ═══════════════════════════════════════════════════════════
-  # 🦑 Right Column — Repos + Anilist + Music
+  # 🦑 Right Column — Featured Repos + Contribution Calendar
   # ═══════════════════════════════════════════════════════════
   medias:
     runs-on: ubuntu-latest
@@ -102,27 +71,15 @@ jobs:
           user: Sowndhar-2005
           template: classic
           config_timezone: Asia/Kolkata
-          config_order: repositories, music
+          config_order: repositories, isocalendar
 
           # ═══ No base content ═══
           base: ""
 
-          # ═══ Featured Repositories (your 3 projects) ═══
+          # ═══ Featured Repositories ═══
           plugin_repositories: yes
           plugin_repositories_featured: Sowndhar-2005/Campus-Canteen, Sowndhar-2005/Student-Performance-Analysis-Dashboard, Sowndhar-2005/DrugGuard-Detection-System
 
-          # ═══ Anilist (anime & manga) ═══
-          # Note: Temporarily disabled because AniList API is returning HTTP 403 (disabled due to severe stability issues).
-          # You can re-enable by setting to 'yes' and adding 'anilist' back to config_order once AniList resolves their API.
-          plugin_anilist: no
-          plugin_anilist_user: Master466
-          plugin_anilist_medias: anime
-          plugin_anilist_sections: favorites
-          plugin_anilist_limit: 2
-
-          # ═══ Music (YouTube Music playlist) ═══
-          plugin_music: yes
-          plugin_music_provider: youtube
-          plugin_music_mode: playlist
-          plugin_music_playlist: https://music.youtube.com/playlist?list=PLH7y-NrjweAk
-          plugin_music_limit: 4
+          # ═══ Contribution Calendar (isometric 3D) ═══
+          plugin_isocalendar: yes
+          plugin_isocalendar_duration: half-year
