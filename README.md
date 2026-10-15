@@ -16,21 +16,20 @@
 
 <br/>
 
-<!-- Two-Column Metrics Layout -->
-<table align="center" border="0" cellpadding="0" cellspacing="0">
-  <tr>
-    <td valign="top" width="50%">
-      <a href="https://wakatime.com/@Sowndhar-2005">
-        <img src="https://raw.githubusercontent.com/Sowndhar-2005/Sowndhar-2005/main/github-metrics.svg" alt="GitHub Metrics" width="400"/>
-      </a>
-    </td>
-    <td valign="top" width="50%">
-      <a href="https://github.com/Sowndhar-2005?tab=repositories">
-        <img src="https://raw.githubusercontent.com/Sowndhar-2005/Sowndhar-2005/main/medias.svg" alt="Featured Projects & Contributions" width="400"/>
-      </a>
-    </td>
-  </tr>
-</table>
+<!-- Metrics & Projects (Single Column Layout) -->
+<p align="center">
+  <a href="https://wakatime.com/@Sowndhar-2005">
+    <img src="https://raw.githubusercontent.com/Sowndhar-2005/Sowndhar-2005/main/github-metrics.svg" alt="GitHub Metrics" width="480"/>
+  </a>
+</p>
+
+<br/>
+
+<p align="center">
+  <a href="https://github.com/Sowndhar-2005?tab=repositories">
+    <img src="https://raw.githubusercontent.com/Sowndhar-2005/Sowndhar-2005/main/medias.svg" alt="Featured Projects & Contributions" width="480"/>
+  </a>
+</p>
 
 <br/>
 
