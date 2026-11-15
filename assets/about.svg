@@ -1,0 +1,36 @@
+<svg width="880" height="110" viewBox="0 0 880 110" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="about-bg" x1="0" y1="0" x2="880" y2="110" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#0B0F19" />
+      <stop offset="100%" stop-color="#080C14" />
+    </linearGradient>
+    <linearGradient id="about-border" x1="0" y1="0" x2="880" y2="110" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#2D3748" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#1E293B" stop-opacity="0.8" />
+    </linearGradient>
+  </defs>
+
+  <!-- Panel Container -->
+  <rect x="1" y="1" width="878" height="108" rx="14" fill="url(#about-bg)" stroke="url(#about-border)" stroke-width="1.2" />
+
+  <!-- Header: Icon & Title -->
+  <g transform="translate(28, 22)">
+    <!-- Person Icon -->
+    <path d="M6 0C7.66 0 9 1.34 9 3C9 4.66 7.66 6 6 6C4.34 6 3 4.66 3 3C3 1.34 4.34 0 6 0ZM6 7.5C9.33 7.5 12 9.17 12 11.5V13H0V11.5C0 9.17 2.67 7.5 6 7.5Z" fill="#E2E8F0" transform="translate(0, 1) scale(1.15)"/>
+    <text x="24" y="13" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="16" font-weight="600" fill="#FFFFFF">About Me</text>
+  </g>
+
+  <!-- Content with Vertical Purple Bar -->
+  <g transform="translate(28, 54)">
+    <!-- Vertical Purple Bar -->
+    <rect x="0" y="2" width="3" height="38" rx="1.5" fill="#8B5CF6" />
+
+    <!-- Text Body -->
+    <text x="18" y="16" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13.8" font-weight="400" fill="#E2E8F0">
+      I build real-world digital and physical solutions by combining software development, product design, and
+    </text>
+    <text x="18" y="36" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13.8" font-weight="400" fill="#E2E8F0">
+      smart manufacturing. I enjoy turning ideas into useful, user-centric, and impactful systems.
+    </text>
+  </g>
+</svg>

@@ -1,0 +1,15 @@
+# Python cache
+__pycache__/
+*.pyc
+
+# Local environment variables & secrets
+.env
+*.env
+.secrets
+
+# Reference reports and sample design images (local only)
+project Full report.txt
+ABOUT_ME.md
+Readme Sample image .png
+assets/crop_*.png
+assets/test_*.png

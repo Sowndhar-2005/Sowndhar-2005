@@ -1,0 +1,75 @@
+<svg width="880" height="120" viewBox="0 0 880 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Card Gradients -->
+    <linearGradient id="exp-card-bg" x1="0" y1="0" x2="208" y2="120" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#0F1422" />
+      <stop offset="100%" stop-color="#0B0F19" />
+    </linearGradient>
+
+    <!-- Border Gradients for each expertise -->
+    <linearGradient id="border-aiml" x1="0" y1="0" x2="208" y2="120" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#8B5CF6" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#1E293B" stop-opacity="0.5" />
+    </linearGradient>
+    <linearGradient id="border-dev" x1="0" y1="0" x2="208" y2="120" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#3B82F6" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#1E293B" stop-opacity="0.5" />
+    </linearGradient>
+    <linearGradient id="border-mfg" x1="0" y1="0" x2="208" y2="120" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#10B981" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#1E293B" stop-opacity="0.5" />
+    </linearGradient>
+    <linearGradient id="border-uiux" x1="0" y1="0" x2="208" y2="120" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#EC4899" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#1E293B" stop-opacity="0.5" />
+    </linearGradient>
+  </defs>
+
+  <!-- Card 1: AI/ML -->
+  <g transform="translate(0, 0)">
+    <rect x="1" y="1" width="208" height="118" rx="14" fill="url(#exp-card-bg)" stroke="url(#border-aiml)" stroke-width="1.2"/>
+    <!-- Icon Container -->
+    <rect x="20" y="18" width="36" height="36" rx="8" fill="#2E1065" stroke="#7C3AED" stroke-width="1"/>
+    <!-- Brain / Neural Network Icon -->
+    <path d="M12 4C9.5 4 7.5 5.8 7.1 8.2C6.1 8.6 5.3 9.4 5.1 10.5C4.2 11.2 3.7 12.3 3.7 13.5C3.7 15.3 4.9 16.7 6.6 17C7.1 18.7 8.6 20 10.5 20C11.5 20 12.4 19.6 13 19V5C12.7 4.4 12.4 4 12 4ZM15 5V19C15.6 19.6 16.5 20 17.5 20C19.4 20 20.9 18.7 21.4 17C23.1 16.7 24.3 15.3 24.3 13.5C24.3 12.3 23.8 11.2 22.9 10.5C22.7 9.4 21.9 8.6 20.9 8.2C20.5 5.8 18.5 4 16 4C15.6 4 15.3 4.4 15 5Z" fill="#C084FC" transform="translate(24, 22) scale(0.9)"/>
+    <!-- Title & Subtitle -->
+    <text x="20" y="80" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="16" font-weight="700" fill="#FFFFFF">AI/ML</text>
+    <text x="20" y="100" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11.5" font-weight="400" fill="#94A3B8">ML · DL · NLP · LLM · RAG</text>
+  </g>
+
+  <!-- Card 2: Development -->
+  <g transform="translate(224, 0)">
+    <rect x="1" y="1" width="208" height="118" rx="14" fill="url(#exp-card-bg)" stroke="url(#border-dev)" stroke-width="1.2"/>
+    <!-- Icon Container -->
+    <rect x="20" y="18" width="36" height="36" rx="8" fill="#172554" stroke="#2563EB" stroke-width="1"/>
+    <!-- Code Icon </> -->
+    <path d="M7 6L2 11L7 16M15 6L20 11L15 16M12 4L10 18" stroke="#60A5FA" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" transform="translate(27, 25) scale(0.95)"/>
+    <!-- Title & Subtitle -->
+    <text x="20" y="80" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="16" font-weight="700" fill="#FFFFFF">Development</text>
+    <text x="20" y="100" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11.5" font-weight="400" fill="#94A3B8">Web · Desktop · Mobile · APIs</text>
+  </g>
+
+  <!-- Card 3: Manufacturing -->
+  <g transform="translate(448, 0)">
+    <rect x="1" y="1" width="208" height="118" rx="14" fill="url(#exp-card-bg)" stroke="url(#border-mfg)" stroke-width="1.2"/>
+    <!-- Icon Container -->
+    <rect x="20" y="18" width="36" height="36" rx="8" fill="#064E3B" stroke="#059669" stroke-width="1"/>
+    <!-- 3D Cube / Precision Wireframe Icon -->
+    <path d="M12 2L2 7L12 12L22 7L12 2ZM2 17L12 22L22 17M2 12L12 17L22 12" stroke="#34D399" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" fill="none" transform="translate(26, 24) scale(0.95)"/>
+    <!-- Title & Subtitle -->
+    <text x="20" y="80" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="16" font-weight="700" fill="#FFFFFF">Manufacturing</text>
+    <text x="20" y="100" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11.5" font-weight="400" fill="#94A3B8">CAD · Fabrication · IIoT · Quality</text>
+  </g>
+
+  <!-- Card 4: UI/UX Design -->
+  <g transform="translate(672, 0)">
+    <rect x="1" y="1" width="208" height="118" rx="14" fill="url(#exp-card-bg)" stroke="url(#border-uiux)" stroke-width="1.2"/>
+    <!-- Icon Container -->
+    <rect x="20" y="18" width="36" height="36" rx="8" fill="#4C0519" stroke="#E11D48" stroke-width="1"/>
+    <!-- Layers Icon -->
+    <path d="M12 2L2 7L12 12L22 7L12 2ZM2 17L12 22L22 17M2 12L12 17L22 12" stroke="#FB7185" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" fill="none" transform="translate(26, 24) scale(0.95)"/>
+    <!-- Title & Subtitle -->
+    <text x="20" y="80" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="16" font-weight="700" fill="#FFFFFF">UI/UX Design</text>
+    <text x="20" y="100" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11.5" font-weight="400" fill="#94A3B8">Product · Design · Prototyping</text>
+  </g>
+</svg>
